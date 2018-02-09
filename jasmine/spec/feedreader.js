@@ -38,7 +38,7 @@ $(function() {
    it("URL is defined and not empty", function() {
           // loops through each feed
             allFeeds.forEach(function(feed) {
-                URLfeed = feed.url;
+            var URLfeed = feed.url;
                 expect( URLfeed).toBeDefined();
                 expect( URLfeed.length).not.toBe(0); // if the URLfeed.length is equal to 0, that's mean its empty!
             });
@@ -97,7 +97,7 @@ $(function() {
        // Ensure there is at least a single .entry element within the .feed container.
         it("Has an entry within the feed container", function(done) {
          
-            expect($('.feed').children().length).toBeGreaterThan(0);
+            expect($('.feed .entry').length).toBeGreaterThan(0);
             done();
         });
     });
