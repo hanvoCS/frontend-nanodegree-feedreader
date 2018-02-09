@@ -97,7 +97,7 @@ $(function() {
        // Ensure there is at least a single .entry element within the .feed container.
         it("Has an entry within the feed container", function(done) {
          
-            expect($('.feed').length).toBeGreaterThan(0);
+            expect($('.feed').children().length).toBeGreaterThan(0);
             done();
         });
     });
